@@ -1,19 +1,10 @@
-import axios from 'axios';
 import { Router } from 'express';
-import { Block } from '@blockchain/api-interfaces';
+import getLatestBlocks from './controller';
 
 const router = Router();
 
-router.get('/latest', (_, res) => {
-  const url = `https://blockchain.info/blocks/${Date.now()}?format=json`
-  return axios.get<{data: Array<Block>}>(url)
-  .then(function ({data}) {
-    res.send(data)
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
- });
+router.get('/latest', (req, res) =>
+  getLatestBlocks().then((data) => res.send(data))
+);
 
-
- export default router;
+export default router;

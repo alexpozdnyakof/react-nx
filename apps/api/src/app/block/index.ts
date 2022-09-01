@@ -1,1 +1,1 @@
-export { default as blockRoutes } from './router'
+export { default as blockRoutes } from './router';
