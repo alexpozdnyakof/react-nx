@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@blockchain/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@blockchain/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@blockchain/blockchain/ui-shared": [
+        "libs/blockchain/ui-shared/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

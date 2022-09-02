@@ -4,6 +4,8 @@
   "projects": {
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
+    "blockchain-ui-shared": "libs/blockchain/ui-shared",
+    "broadcast": "apps/broadcast",
     "homepage": "apps/homepage",
     "homepage-e2e": "apps/homepage-e2e"
   }
