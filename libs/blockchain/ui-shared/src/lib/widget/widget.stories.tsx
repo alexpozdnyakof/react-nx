@@ -7,7 +7,17 @@ export default {
 } as ComponentMeta<typeof Widget>;
 
 const Template: ComponentStory<typeof Widget> = (args: Partial<WidgetProps>) => (
-<Widget {...args} />
+<Widget {...args}>
+  <div style={{
+    width: '100%',
+    backgroundImage: 'var(--gradient-orange)',
+    height: '320px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: '#fff',
+    fontSize:'20px',
+  }}>Content</div></Widget>
 );
 
 export const Primary = Template.bind({});

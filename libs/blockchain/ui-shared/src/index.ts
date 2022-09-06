@@ -1,1 +1,3 @@
-export * from './lib/latest-txs/latest-txs';
+export * from './lib/block-card';
+export * from './lib/txs-table';
+export * from './lib/widget';

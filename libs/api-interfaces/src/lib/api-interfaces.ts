@@ -7,6 +7,8 @@ export interface Block {
   height: number;
   time: number;
   block_index: number;
+  sizeKb: number;
+  includedTxs: number;
 }
 export interface Tx {
   hash: string;
