@@ -28,6 +28,7 @@
           "configFolder": "libs/blockchain/ui-shared/.storybook"
         }
       },
+      "styles": ["src/lib/styles.less"],
       "configurations": {
         "ci": {
           "quiet": true
