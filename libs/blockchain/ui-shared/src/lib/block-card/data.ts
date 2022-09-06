@@ -1,4 +1,6 @@
-const BLX_DATA = [
+import { BlockCardProps } from './block-card';
+
+const BLX_DATA: Array<BlockCardProps> = [
   {
     index: '752,722',
     time: new Intl.DateTimeFormat('en-US', {
@@ -12,7 +14,7 @@ const BLX_DATA = [
     }).format(Date.now()),
     size: '1.2 Mb',
     txsCount: 723,
-    occupancy: 71,
+    occupancy: '71%',
   },
 ];
 

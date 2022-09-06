@@ -7,7 +7,7 @@ export interface BlockCardProps {
   time: string,
   size: string,
   txsCount: number
-  occupancy: number,
+  occupancy: string,
 }
 
 export function BlockCard({index, time, size, txsCount, occupancy, testid}: BlockCardProps) {
@@ -15,7 +15,7 @@ export function BlockCard({index, time, size, txsCount, occupancy, testid}: Bloc
     <div className={styles['BlockCard']} data-testid={testid}>
       <div className={styles['Block-Indicator']}>
         <div className={styles['Indicator']}>
-          <div className={styles['Payload']} style={{height: `${occupancy}%`}}>
+          <div className={styles['Payload']} style={{height: occupancy}} data-testid="occupancy-payload">
             <div className={styles['Payload-Fill']}></div>
           </div>
         </div>

@@ -12,7 +12,7 @@ const BLXS_DATA = [
     }).format(Date.now()),
     size: '1.2 Mb',
     txsCount: 723,
-    occupancy: 71,
+    occupancy: '71%',
   }),
 ];
 export { BLXS_DATA };
