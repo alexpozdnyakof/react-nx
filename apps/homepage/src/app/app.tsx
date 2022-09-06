@@ -1,27 +1,49 @@
-import React, { useEffect, useState } from 'react';
-import { Message } from '@blockchain/api-interfaces';
+import styles from './app.module.less';
+import { LatestBlocks } from './features/latest-blocks';
 
 export const App = () => {
-  const [m, setMessage] = useState<Message>({ message: '' });
 
-  useEffect(() => {
-    fetch('/api')
-      .then((r) => r.json())
-      .then(setMessage);
-  }, []);
+  const tiles = [1,2,3,4,5,6,7,8,9,10,11,12];
 
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to homepage!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-          alt="Nx - Smart, Fast and Extensible Build System"
-        />
+    <div className={styles['Homepage-Layout']}>
+      <aside className={styles['Sidebar']}>
+        <div className={styles['Sidebar_Inner']}>
+        </div>
+      </aside>
+
+      <div className={styles['Main']}>
+
+        <header className={styles['TopBar']}>
+          <div className={styles['TopBar-Search']}></div>
+          <div className={styles['Obyavleniya']}></div>
+        </header>
+
+        <div className={styles['Tiles-Wrapper']}>
+          <div className={styles['Tiles-Inner']}>
+            <div className={styles['Tiles']}>
+            <div className={styles['Tile']}>
+                  <div className={styles['Tile-Outer']}>
+                    <div className={styles['Tile-InnerContent']}>
+                     <LatestBlocks/>
+                    </div>
+                  </div>
+                </div>
+              {tiles.map((x) => (
+                <div className={styles['Tile']}>
+                  <div className={styles['Tile-Outer']}>
+                    <div className={styles['Tile-InnerContent']}>
+                      {x}
+                    </div>
+                  </div>
+                </div>
+              ))
+              }
+            </div>
+          </div>
+        </div>
       </div>
-      <div>{m.message}</div>
-    </>
+    </div>
   );
 };
 
