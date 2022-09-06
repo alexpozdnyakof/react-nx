@@ -10,6 +10,14 @@ export interface Block {
   sizeKb: number;
   includedTxs: number;
 }
+
+export interface BlockShort {
+  index: number;
+  time: number;
+  sizeKb: number;
+  txsCount: number;
+  occupancy: number;
+}
 export interface Tx {
   hash: string;
   time: number;
