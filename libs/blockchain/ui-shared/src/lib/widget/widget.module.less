@@ -1,0 +1,73 @@
+
+.Widget {
+  width: 100%;
+}
+
+.Widget-Header{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: calc(100% - 0px);
+  height: 55px;
+}
+
+.Widget-Info{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+}
+.Widget-Symbol {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 14px;
+  cursor: pointer;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.Widget-Title{
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+.Widget-SubTitle{
+  cursor: pointer;
+  font-size: 0.7rem;
+  line-height: normal;
+  padding: 0px;
+  margin: 0px;
+  color: var(--color-font-secondary, rgba(153,153,153,1));
+  text-transform: uppercase;
+}
+
+.Widget-Arrow{
+  width: 40px;
+  height: 40px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.2s ease-in 0s;
+  color: var(--color-font-main, rgba(0,0,0,1));
+  text-decoration: none !important;
+}
+
+.Spacer{
+  flex-grow: 1;
+}
+
+.Link {
+  color: var(--color-font-main, rgba(0,0,0,1));
+  text-decoration: none;
+  transition: all .15s ease;
+  &:hover > * {
+    color: var(--color-font-main-hover, rgba(0,0,0,.7));
+    text-decoration: underline;
+  }
+}
