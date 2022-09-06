@@ -7,4 +7,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/blockchain/ui-shared',
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 };
