@@ -6,7 +6,7 @@ export interface BlockCardProps {
   index: string,
   time: string,
   size: string,
-  txsCount: number
+  txsCount: string
   occupancy: string,
 }
 

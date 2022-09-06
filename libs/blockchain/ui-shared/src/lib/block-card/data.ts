@@ -13,7 +13,7 @@ const BLX_DATA: Array<BlockCardProps> = [
       hour12: false,
     }).format(Date.now()),
     size: '1.2 Mb',
-    txsCount: 723,
+    txsCount: '723 Txs',
     occupancy: '71%',
   },
 ];
