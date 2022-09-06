@@ -1,2 +1,1 @@
-export * from './lib/list/list';
-export * from './lib/blockchain-ui-shared';
+export * from './lib/latest-txs/latest-txs';

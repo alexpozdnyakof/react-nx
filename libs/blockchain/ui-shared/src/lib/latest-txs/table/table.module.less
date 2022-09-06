@@ -1,0 +1,20 @@
+.Table{
+  height: calc(100% - 50px);
+  max-height: calc(100% - 50px);
+  width: calc(100%);
+  overflow: hidden;
+  user-select: none;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: max-content 18% 2fr 25%;
+  grid-auto-rows: 10%;
+}
+
+.Table-Row{
+  display: contents;
+  cursor: pointer;
+  transition: all .15s ease;
+  &:hover > * {
+    background: var(--color-on-surface-hover);
+  }
+}

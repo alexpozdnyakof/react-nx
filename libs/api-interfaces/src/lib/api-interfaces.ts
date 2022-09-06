@@ -3,8 +3,14 @@ export interface Message {
 }
 
 export interface Block {
-  hash: string,
-  height: number,
-  time: number,
-  block_index: number
+  hash: string;
+  height: number;
+  time: number;
+  block_index: number;
+}
+export interface Tx {
+  hash: string;
+  time: number;
+  amountBtc: number;
+  amountUsd: number;
 }
