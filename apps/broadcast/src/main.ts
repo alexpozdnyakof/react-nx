@@ -1,5 +1,5 @@
 import { App } from 'uWebSockets.js';
-import { checkForNewTx, getLatestTxs } from './app/tx-model';
+import * as txModel from './app/tx-model';
 
 const port = process.env.port || 3334;
 let time = 0;
@@ -11,12 +11,12 @@ const app = App().ws('/*', {
     console.log({ id: socket });
     socket.subscribe(channelName);
 
-    app.publish(channelName, JSON.stringify(getLatestTxs()));
+    app.publish(channelName, JSON.stringify(txModel.getLatest()));
 
     intervalId = setInterval(
       () => (
         (time = time + 1),
-        app.publish(channelName, JSON.stringify(checkForNewTx()))
+        app.publish(channelName, JSON.stringify(txModel.getNew())
       ),
       30000
     );

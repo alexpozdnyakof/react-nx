@@ -1,41 +1,15 @@
 import { Tx } from '@blockchain/api-interfaces';
-import {
-  randomIntegerInRange,
-  numberToChar,
-} from '@blockchain/data-generators';
+import { randomIntegerInRange } from '@blockchain/data-generators';
+import { txFactory } from './tx-factory';
 
-export function getLatestTxs(): Array<Tx> {
-  return [...new Array(4).keys()].map(txFactory);
+export function getLatest(): Array<Tx> {
+  return generateTxs(10);
 }
 
-export function checkForNewTx(): Tx {
-  return txFactory();
+export function getNew(): Array<Tx> {
+  return generateTxs(randomIntegerInRange(1, 3));
 }
 
-function txFactory(): Tx {
-  const amount = generateUsd();
-
-  return {
-    hash: generateRandomTxHash(),
-    time: Date.now(),
-    amountBtc: generateBtc(amount),
-    amountUsd: amount,
-  };
-}
-
-const generateUsd = () => randomIntegerInRange(100, 20000);
-const generateBtc = (usdPrice: number) => {
-  const BTC_PRICE = 21008;
-  return usdPrice / BTC_PRICE;
-};
-
-function generateRandomTxHash() {
-  const sideGen = () =>
-    [...new Array(4).keys()].map(() => {
-      const i = randomIntegerInRange(0, 9);
-      if (i % 3 == 0 || i % 2 !== 0) return i.toString();
-      return i % 3 == 0 ? i.toString() : numberToChar(i);
-    });
-
-  return [...sideGen(), '-', ...sideGen()].join('');
+function generateTxs(count: number): Array<Tx> {
+  return [...new Array(count).keys()].map(txFactory);
 }
