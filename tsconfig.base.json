@@ -18,7 +18,8 @@
       "@blockchain/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@blockchain/blockchain/ui-shared": [
         "libs/blockchain/ui-shared/src/index.ts"
-      ]
+      ],
+      "@blockchain/data-generators": ["libs/data-generators/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
