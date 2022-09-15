@@ -1,3 +1,9 @@
+/**
+ * Convert Date to intl string
+ * @param date Date
+ * @returns string
+ */
+
 export default function dateToString(date: Date): string {
   const formatter = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
