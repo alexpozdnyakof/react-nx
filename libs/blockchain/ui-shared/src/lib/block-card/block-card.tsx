@@ -23,13 +23,13 @@ export function BlockCard({index, time, size, txsCount, occupancy, testid}: Bloc
 
       <div className={styles['Block-Description']}>
         <div className={styles['Description-Item']}>
-          <div className={styles['Block-Title']}>{index}</div>
+          <span className={styles['Block-Title']}>{index}</span>
         </div>
         <div className={styles['Description-Item']}>
-          <div className={styles['Block-Time']}>{time}</div>
+          <span className={styles['Block-Time']}>{time}</span>
         </div>
         <div className={styles['Description-Item']}>
-          <div className={styles['Block-Size']}>{txsCount} Txs  • {size}</div>
+          <span className={styles['Block-Size']}>{txsCount}  • {size}</span>
         </div>
       </div>
     </div>
