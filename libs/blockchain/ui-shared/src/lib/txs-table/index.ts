@@ -1,1 +1,1 @@
-export { default as TxsTable } from './txs-table';
+export { default as TxsTable, TxProps } from './txs-table';

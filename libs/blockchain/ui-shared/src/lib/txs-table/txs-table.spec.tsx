@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { TXS_DATA } from '../latest-txs/data';
+import { TXS_DATA } from './data';
 
 import TxsTable from './txs-table';
 

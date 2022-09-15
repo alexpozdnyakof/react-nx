@@ -1,9 +1,15 @@
-import { Tx } from '@blockchain/api-interfaces';
 import styles from './txs-table.module.less';
+
+export interface TxProps {
+    hash: string,
+    time: string,
+    amountBtc: `${string} Btc`,
+    amountUsd: `${string} Usd`
+}
 
 /* eslint-disable-next-line */
 export interface TxsTableProps {
-  txs: Array<Tx>
+  txs: Array<TxProps>
 }
 const joinStyles = (styles: {readonly [key: string] : string}) => (x: Array<string>) => x.map(z => styles[z]).join(' ')
 export function TxsTable({txs}: TxsTableProps) {
