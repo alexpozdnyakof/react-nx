@@ -19,6 +19,7 @@
       "@blockchain/blockchain/ui-shared": [
         "libs/blockchain/ui-shared/src/index.ts"
       ],
+      "@blockchain/data-formatters": ["libs/data-formatters/src/index.ts"],
       "@blockchain/data-generators": ["libs/data-generators/src/index.ts"]
     }
   },
