@@ -1,5 +1,6 @@
 import styles from './app.module.less';
 import { LatestBlocks } from './features/latest-blocks';
+import { TransactionsList } from './features/transactions';
 
 export const App = () => {
 
@@ -18,17 +19,24 @@ export const App = () => {
           <div className={styles['TopBar-Search']}></div>
           <div className={styles['Obyavleniya']}></div>
         </header>
-
+        <h1>Latest Transactions</h1>
         <div className={styles['Tiles-Wrapper']}>
           <div className={styles['Tiles-Inner']}>
             <div className={styles['Tiles']}>
-            <div className={styles['Tile']}>
-                  <div className={styles['Tile-Outer']}>
-                    <div className={styles['Tile-InnerContent']}>
-                     <LatestBlocks/>
-                    </div>
+              <div className={styles['Tile']} style={{fontSize: '13px'}}>
+                <div className={styles['Tile-Outer']}>
+                  <div className={styles['Tile-InnerContent']}>
+                    <LatestBlocks/>
                   </div>
                 </div>
+              </div>
+              <div className={styles['Tile']} style={{fontSize: '13px'}}>
+                <div className={styles['Tile-Outer']}>
+                  <div className={styles['Tile-InnerContent']}>
+                    <TransactionsList/>
+                  </div>
+                </div>
+              </div>
               {tiles.map((x) => (
                 <div className={styles['Tile']}>
                   <div className={styles['Tile-Outer']}>
