@@ -1,19 +1,13 @@
-export function latestBlocksModel() {
+import { BlockShort } from '@blockchain/api-interfaces';
+
+export function latestBlocksModel(): Array<BlockShort> {
   return [
-    ...new Array(10).fill({
-      index: '752,722',
-      time: new Intl.DateTimeFormat('en-US', {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        hour12: false,
-      }).format(Date.now()),
-      size: '1.2 Mb',
-      txsCount: '723 Txs',
-      occupancy: '71%',
+    ...new Array(5).fill({
+      index: 75260722,
+      time: Date.now(),
+      size: 1200,
+      txsCount: 723,
+      occupancy: 71,
     }),
   ];
 }
