@@ -16,7 +16,7 @@ const app = App().ws('/*', {
     intervalId = setInterval(
       () => (
         (time = time + 1),
-        app.publish(channelName, JSON.stringify(txModel.getNew())
+        app.publish(channelName, JSON.stringify(txModel.getNew()))
       ),
       30000
     );
