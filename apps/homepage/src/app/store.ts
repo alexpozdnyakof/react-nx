@@ -8,7 +8,7 @@ const sagas = createSagaMiddleware();
 
 const store = configureStore({
   reducer: {
-    txs: transactionReducer,
+    latestTxs: transactionReducer,
     latestBlocks: latestBlockReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagas),
