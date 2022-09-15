@@ -7,6 +7,7 @@
     "blockchain-ui-shared": "libs/blockchain/ui-shared",
     "blockchain-ui-shared-e2e": "apps/blockchain-ui-shared-e2e",
     "broadcast": "apps/broadcast",
+    "data-formatters": "libs/data-formatters",
     "data-generators": "libs/data-generators",
     "homepage": "apps/homepage",
     "homepage-e2e": "apps/homepage-e2e"
