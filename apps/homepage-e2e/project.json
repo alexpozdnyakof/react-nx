@@ -7,7 +7,7 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "apps/homepage-e2e/cypress.config.ts",
-        "devServerTarget": "homepage:serve:development",
+        "devServerTarget": "homepage:serve:test-e2e",
         "testingType": "e2e"
       },
       "configurations": {

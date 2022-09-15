@@ -75,6 +75,13 @@
         "jestConfig": "apps/homepage/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "test-e2e": {
+      "builder": "nx:run-commands",
+      "options": {
+        "commands": ["nx api", "nx broadcast", "nx e2e homepage-e2e"],
+        "parallel": true
+      }
     }
   },
   "tags": []
