@@ -1,6 +1,6 @@
-import { eventChannel } from 'redux-saga';
+import { EventChannel, eventChannel } from 'redux-saga';
 import { call, put, take } from 'redux-saga/effects';
-import { loadSuccess } from './slice';
+import { loadSuccess, LoadSuccessPayload } from './slice';
 
 const createWebSocketConnection = () => new WebSocket('ws://localhost:3334');
 
@@ -12,7 +12,7 @@ function createSocketChannel(socket: WebSocket) {
 
   return eventChannel((emit) => {
     const pingHandler = (event: MessageEvent) => {
-      emit(event.data);
+      emit({ data: JSON.parse(event.data) });
     };
 
     const errorHandler = (errorEvent: Event) => {
@@ -31,15 +31,16 @@ function createSocketChannel(socket: WebSocket) {
   });
 }
 
-export function* watchOnPings(): any {
-  const socket = yield call(createWebSocketConnection);
-  const socketChannel = yield call(createSocketChannel, socket);
+export function* txsWebsocketSaga() {
+  const socket: WebSocket = yield call(createWebSocketConnection);
+  const socketChannel: EventChannel<LoadSuccessPayload> = yield call(createSocketChannel, socket);
 
   while (true) {
     try {
       console.log('🏓 watching pings');
-      const payload = yield take(socketChannel);
-      yield put(loadSuccess({ data: JSON.parse(payload) }));
+
+      const payload: LoadSuccessPayload = yield take(socketChannel);
+      yield put(loadSuccess(payload));
     } catch (err) {
       console.error('socket error:', err);
       socketChannel.close();

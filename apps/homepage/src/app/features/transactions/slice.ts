@@ -11,6 +11,8 @@ const initialState: TransactionState = {
   status: 'idle',
 };
 
+export type LoadSuccessPayload = Array<Tx>;
+
 export const transactionsSlice = createSlice({
   name: 'transaction',
   initialState,
@@ -18,8 +20,8 @@ export const transactionsSlice = createSlice({
     load: (state) => {
       state.status = 'loading';
     },
-    loadSuccess: (state, action: PayloadAction<{ data: Array<Tx> }>) => {
-      state.txs = [...action.payload.data, ...state.txs];
+    loadSuccess: (state, action: PayloadAction<LoadSuccessPayload>) => {
+      state.txs = [...action.payload, ...state.txs];
       state.status = 'idle';
     },
   },

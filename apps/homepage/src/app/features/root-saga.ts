@@ -1,10 +1,10 @@
 import { fork } from 'redux-saga/effects';
 import { latestBlockSaga } from './latest-blocks/saga';
-import { watchOnPings } from './transactions/ws-saga';
+import { txsWebsocketSaga } from './transactions/ws-saga';
 
 export default function* rootSaga() {
   try {
-    yield fork(watchOnPings);
+    yield fork(txsWebsocketSaga);
     yield fork(latestBlockSaga);
   } catch (e) {
     console.log('root level');
