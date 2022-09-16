@@ -4,27 +4,7 @@ import { call } from 'redux-saga/effects';
 import { loadSuccess } from './slice';
 import latestTransactionsSaga, { createSocketChannel } from './saga';
 import transactionsSliceReducer from './slice';
-
-const DEMO_DATA = [
-  {
-    hash: '123-qwe',
-    time: 1663353730855,
-    amountUsd: 1000,
-    amountBtc: 1000,
-  },
-  {
-    hash: '123-qwe',
-    time: 1663353730855,
-    amountUsd: 1000,
-    amountBtc: 1000,
-  },
-  {
-    hash: '123-qwe',
-    time: 1663353730855,
-    amountUsd: 1000,
-    amountBtc: 1000,
-  },
-];
+import { DEMO_DATA } from './data';
 
 describe('Latest transactions saga', () => {
   let wsServer: Server;
