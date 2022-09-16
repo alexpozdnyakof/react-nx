@@ -1,7 +1,7 @@
 import { Tx } from '@blockchain/api-interfaces';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface TransactionState {
+export interface TransactionState {
   txs: Array<Tx>;
   status: 'idle' | 'loading' | 'failed';
 }
@@ -24,9 +24,12 @@ export const transactionsSlice = createSlice({
       state.txs = [...action.payload, ...state.txs];
       state.status = 'idle';
     },
+    loadFailed: (state) => {
+      state.status = 'failed';
+    },
   },
 });
 
-export const { load, loadSuccess } = transactionsSlice.actions;
+export const { load, loadSuccess, loadFailed } = transactionsSlice.actions;
 
 export default transactionsSlice.reducer;
