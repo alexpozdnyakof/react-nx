@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../store-hooks'
 import { selectTxProps } from './selectors'
 import { load } from './slice'
 
-export default function TransactionsList() {
+export default function LatestTransactions() {
   const dispatch = useAppDispatch()
 
   useEffect(() => {

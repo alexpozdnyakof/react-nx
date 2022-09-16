@@ -1,6 +1,6 @@
 import styles from './app.module.less';
 import { LatestBlocks } from './features/latest-blocks';
-import { TransactionsList } from './features/transactions';
+import { LatestTransactions } from './features/transactions';
 
 export const App = () => {
 
@@ -33,7 +33,7 @@ export const App = () => {
               <div className={styles['Tile']} style={{fontSize: '13px'}}>
                 <div className={styles['Tile-Outer']}>
                   <div className={styles['Tile-InnerContent']}>
-                    <TransactionsList/>
+                    <LatestTransactions />
                   </div>
                 </div>
               </div>
