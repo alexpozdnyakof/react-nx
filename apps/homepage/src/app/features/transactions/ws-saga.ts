@@ -4,11 +4,11 @@ import { loadSuccess, LoadSuccessPayload } from './slice';
 
 const createWebSocketConnection = () => new WebSocket('ws://localhost:3334');
 
-function createSocketChannel(socket: WebSocket) {
+export function createSocketChannel(socket: WebSocket) {
   socket.onopen = () => {
     console.log(socket);
     socket.send('hello');
-∏  };
+  };
 
   return eventChannel((emit) => {
     const pingHandler = (event: MessageEvent) => {
@@ -16,7 +16,7 @@ function createSocketChannel(socket: WebSocket) {
     };
 
     const errorHandler = (errorEvent: Event) => {
-      console.error({errorEvent});
+      console.error({ errorEvent });
       emit(new Error('socket error'));
     };
 
@@ -31,9 +31,12 @@ function createSocketChannel(socket: WebSocket) {
   });
 }
 
-export function* txsWebsocketSaga() {
+export default function* latestTransactionsSaga() {
   const socket: WebSocket = yield call(createWebSocketConnection);
-  const socketChannel: EventChannel<LoadSuccessPayload> = yield call(createSocketChannel, socket);
+  const socketChannel: EventChannel<LoadSuccessPayload> = yield call(
+    createSocketChannel,
+    socket
+  );
 
   while (true) {
     try {
