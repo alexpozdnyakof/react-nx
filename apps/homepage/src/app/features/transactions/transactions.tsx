@@ -1,7 +1,6 @@
 import { TxsTable, Widget } from '@blockchain/blockchain/ui-shared'
 import { useEffect } from 'react'
-import { useSelector } from 'react-redux'
-import { useAppDispatch } from '../../store-hooks'
+import { useAppDispatch, useAppSelector } from '../../store-hooks'
 import { selectTxProps } from './selectors'
 import { load } from './slice'
 
@@ -13,7 +12,7 @@ export default function TransactionsList() {
 
   }, [dispatch])
 
-  const txs = useSelector(selectTxProps)
+  const txs = useAppSelector(selectTxProps)
 
   return (
     <Widget
