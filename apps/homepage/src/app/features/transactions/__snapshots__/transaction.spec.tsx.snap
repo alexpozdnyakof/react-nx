@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`latest transactions should render correctly 1`] = `
+<div
+  className="Widget"
+>
+  <div
+    className="Widget-Header"
+  >
+    <img
+      alt="widget symbol"
+      className="Widget-Symbol"
+      src="https://www.blockchain.com/explorer/_next/static/media/btc.a6006067.png"
+    />
+    <div
+      className="Widget-Info"
+    >
+      <a
+        className="Link"
+        data-testid="title-link"
+        href="https://www.blockchain.com/btc/unconfirmed-transactions"
+      >
+        <h1
+          className="Widget-Title"
+        >
+          Latest Transactions
+        </h1>
+      </a>
+      <h2
+        className="Widget-SubTitle"
+      >
+        Bitcoin
+      </h2>
+    </div>
+    <div
+      className="Spacer"
+    />
+    <a
+      className="Link"
+      data-testid="arrow-link"
+      href="https://www.blockchain.com/btc/unconfirmed-transactions"
+    >
+      <span
+        className="Widget-Arrow"
+      >
+        →
+      </span>
+    </a>
+  </div>
+  <div
+    className="Table"
+  >
+    <div
+      className="Table-Row"
+      data-testid="table-body-row"
+    >
+      <span
+        className="Tx-Cell"
+      >
+        123-qwe
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_time"
+      >
+        17/09/2022
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Btc
+         BTC
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Usd
+      </span>
+    </div>
+    <div
+      className="Table-Row"
+      data-testid="table-body-row"
+    >
+      <span
+        className="Tx-Cell"
+      >
+        123-qwe
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_time"
+      >
+        17/09/2022
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Btc
+         BTC
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Usd
+      </span>
+    </div>
+    <div
+      className="Table-Row"
+      data-testid="table-body-row"
+    >
+      <span
+        className="Tx-Cell"
+      >
+        123-qwe
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_time"
+      >
+        17/09/2022
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Btc
+         BTC
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Usd
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`latest transactions should render correctly with transactions 1`] = `
+<div
+  className="Widget"
+>
+  <div
+    className="Widget-Header"
+  >
+    <img
+      alt="widget symbol"
+      className="Widget-Symbol"
+      src="https://www.blockchain.com/explorer/_next/static/media/btc.a6006067.png"
+    />
+    <div
+      className="Widget-Info"
+    >
+      <a
+        className="Link"
+        data-testid="title-link"
+        href="https://www.blockchain.com/btc/unconfirmed-transactions"
+      >
+        <h1
+          className="Widget-Title"
+        >
+          Latest Transactions
+        </h1>
+      </a>
+      <h2
+        className="Widget-SubTitle"
+      >
+        Bitcoin
+      </h2>
+    </div>
+    <div
+      className="Spacer"
+    />
+    <a
+      className="Link"
+      data-testid="arrow-link"
+      href="https://www.blockchain.com/btc/unconfirmed-transactions"
+    >
+      <span
+        className="Widget-Arrow"
+      >
+        →
+      </span>
+    </a>
+  </div>
+  <div
+    className="Table"
+  >
+    <div
+      className="Table-Row"
+      data-testid="table-body-row"
+    >
+      <span
+        className="Tx-Cell"
+      >
+        123-qwe
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_time"
+      >
+        17/09/2022
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Btc
+         BTC
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Usd
+      </span>
+    </div>
+    <div
+      className="Table-Row"
+      data-testid="table-body-row"
+    >
+      <span
+        className="Tx-Cell"
+      >
+        123-qwe
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_time"
+      >
+        17/09/2022
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Btc
+         BTC
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Usd
+      </span>
+    </div>
+    <div
+      className="Table-Row"
+      data-testid="table-body-row"
+    >
+      <span
+        className="Tx-Cell"
+      >
+        123-qwe
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_time"
+      >
+        17/09/2022
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Btc
+         BTC
+      </span>
+      <span
+        className="Tx-Cell Tx-Cell_amount"
+      >
+        1000 Usd
+      </span>
+    </div>
+  </div>
+</div>
+`;
