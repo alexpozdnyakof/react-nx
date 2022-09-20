@@ -5,11 +5,9 @@ import { useAppDispatch } from '../../store-hooks';
 import { selectLatestBlocks } from './selectors';
 import { load } from './slice';
 import styles from './latest-blocks.module.less';
-/* eslint-disable-next-line */
-export interface LatestBlocksProps {
-}
 
-export function LatestBlocks(props: LatestBlocksProps) {
+
+export function LatestBlocks() {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
@@ -27,8 +25,8 @@ export function LatestBlocks(props: LatestBlocksProps) {
       link="https://www.blockchain.com/btc/unconfirmed-transactions"
     >
       {blocks.map((block, i) => (
-        <div className={styles['Block-Container']}>
-          <BlockCard {...block} testid="block-card" key={block.index.concat(i.toString())}/>
+        <div className={styles['Block-Container']} key={block.index.concat(i.toString())}>
+          <BlockCard {...block} testid="block-card"/>
         </div>
       ))}
     </Widget>

@@ -18,16 +18,16 @@ export const blocksSlice = createSlice({
     load: (state) => {
       state.status = 'loading';
     },
-    loadSuccess: (
-      state,
-      action: PayloadAction<{ data: Array<BlockShort> }>
-    ) => {
-      state.blocks = [...action.payload.data];
+    loadSuccess: (state, action: PayloadAction<Array<BlockShort>>) => {
+      state.blocks = [...action.payload];
       state.status = 'idle';
+    },
+    loadFailed: (state) => {
+      state.status = 'failed';
     },
   },
 });
 
-export const { load, loadSuccess } = blocksSlice.actions;
+export const { load, loadSuccess, loadFailed } = blocksSlice.actions;
 
 export default blocksSlice.reducer;

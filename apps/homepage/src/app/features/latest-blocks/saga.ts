@@ -10,7 +10,7 @@ export function* loadLatestBlocks() {
       'api/block/latest'
     );
 
-    yield put(loadSuccess({ data: response.data }));
+    yield put(loadSuccess(response.data));
   } catch (e) {
     throw new Error('Cannot load latest blocks');
   }
