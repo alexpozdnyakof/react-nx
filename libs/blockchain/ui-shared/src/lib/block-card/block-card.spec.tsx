@@ -1,19 +1,19 @@
 import { render } from '@testing-library/react';
-import { BLXS_DATA } from '../latest-blocks/data';
+import { BLX_DATA } from './data';
 
 import BlockCard from './block-card';
 
 describe('BlockCard', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<BlockCard {...BLXS_DATA[0]}/>);
+    const { baseElement } = render(<BlockCard {...BLX_DATA[0]}/>);
     expect(baseElement).toBeTruthy();
   });
 
 
   it('should render props successfully', () => {
-    const { getByText, getByTestId } = render(<BlockCard {...BLXS_DATA[0]}/>);
-    expect(getByText(BLXS_DATA[0].index)).toBeInTheDocument();
-    expect(getByText(BLXS_DATA[0].time)).toBeInTheDocument();
-    expect(getByTestId('occupancy-payload')).toHaveStyle({'height': BLXS_DATA[0].occupancy});
+    const { getByText, getByTestId } = render(<BlockCard {...BLX_DATA[0]}/>);
+    expect(getByText(BLX_DATA[0].index)).toBeInTheDocument();
+    expect(getByText(BLX_DATA[0].time)).toBeInTheDocument();
+    expect(getByTestId('occupancy-payload')).toHaveStyle({'height': BLX_DATA[0].occupancy});
   });
 });
